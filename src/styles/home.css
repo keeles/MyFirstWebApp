@@ -1,0 +1,120 @@
+:root {
+    --main-bg-color: rgb(95, 119, 104);
+    --main-container-color: rgb(2, 88, 48);
+    --main-container-border: goldenrod;
+    --button-border-radius: 6px;
+    --button-background-hover: rgb(202, 202, 202);
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 100px 20px 100px;
+    background-color: var(--main-bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-basis: 30%;
+    margin: 20px;
+    justify-content: center;
+}
+
+.profile {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: var(--main-container-color);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: double;
+    border-color: var(--main-container-border);
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+img {
+    position: absolute;
+    top: 50px;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    border-style: solid;
+}
+
+.btn {
+    position: relative;
+    background-color:var(--main-bg-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    width: 80px;
+    height: 20px;
+    left: 120px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--button-background-hover);
+}
+
+input {
+    background-color: var(--main-bg-color);
+    border: none;
+}
+
+input:hover {
+    cursor: pointer;
+    background-color: var(--button-background-hover);
+}
+
+.profile-upload {
+    position: relative;
+    left: 150px;
+    top: 140px;
+}
+
+.profile-user-name {
+    position: relative;
+    left: 150px;
+}
+
+#submit {
+    position: relative;
+    top: 160px;
+    left: 150px;
+    border-radius: var(--button-border-radius);
+}
+
+label {
+    border-radius: var(--button-border-radius);
+}
+
+input[type='file'] { 
+    font-size: 0;
+    background-color: var(--main-container-color);
+}
+
+::file-selector-button { 
+    font-size: initial;
+    background-color: var(--main-bg-color);
+    border-radius: var(--button-border-radius);
+    border: none;
+    width: 80px;
+    height: 20px;
+    font-size: 12px;
+}
+
+::file-selector-button:hover {
+    cursor: pointer;
+    background-color: rgb(202, 202, 202);
+}

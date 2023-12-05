@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <h1 id="header">Home Page</h1>
+    <% for(const user of usersObj) { %>
+    <div class="container">
+        <div class="profile">
+            <form action="/upload?username=<%= user.username %>" enctype="multipart/form-data" method="post">
+                <div>
+                <label for="file" class="btn profile-upload">
+                    <input type="file" name="upload" id=<%=`${user.username}`%> class="file-input" accept="image/*"></input>
+                </label>
+            </div>
+                <input type="submit" id="submit" value="Upload">
+            </form>
+            <a href=<%=`/feed?username=${user.username}`%>><button class="btn profile-user-name"><%= user.username %></button></a>
+            <div class="profilepic">
+                <img src=<%= `../photos/${user.username}/${user.profile}` %>>
+            </div>
+        </div>
+    </div>
+    <% }; %>
+    </body>
+</body>
+</html>
